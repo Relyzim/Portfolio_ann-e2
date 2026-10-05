@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Axel Royer — Portfolio BTS SIO SISR</title>
+  <meta name="description" content="Portfolio d'Axel Royer, étudiant en BTS SIO option SISR, technicien systèmes et réseaux en alternance chez Riou Glass.">
+  <meta name="theme-color" content="#18222e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Axel Royer — Portfolio BTS SIO SISR">
+  <meta property="og:description" content="Technicien systèmes et réseaux en alternance chez Riou Glass. Projets, compétences et documentation.">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="author" content="Axel Royer">
+  <meta name="color-scheme" content="light dark">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Axel Royer",
+    "jobTitle": "Technicien systèmes et réseaux (alternance)",
+    "worksFor": { "@type": "Organization", "name": "Riou Glass" },
+    "alumniOf": { "@type": "EducationalOrganization", "name": "E2SE Caen" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Honfleur", "addressRegion": "Normandie", "addressCountry": "FR" },
+    "email": "mailto:axel.royer@gmail.com",
+    "knowsAbout": ["Administration systèmes", "Réseaux", "Active Directory", "Linux Debian", "Virtualisation", "Docker", "Cybersécurité"]
+  }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2318222e'/><path d='M8 11h16v8h-4v4h-8v-4H8z' fill='%23eceff2'/><circle cx='25' cy='7' r='3' fill='%233ddc6f'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="code.css">
+  <!-- Applique le thème avant l'affichage pour éviter le flash -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- =====================================================
+       NAVIGATION — façon panneau de brassage
+       Chaque port = une section. La LED s'allume sur la section visible.
+       ===================================================== -->
+  <header class="panel" id="panel">
+    <div class="panel-inner">
+      <a class="panel-brand" href="#top">
+        <span class="panel-brand-name">Axel Royer</span>
+        <span class="panel-brand-sub">BTS SIO SISR</span>
+      </a>
+
+      <nav class="ports" aria-label="Sections">
+        <ol>
+          <li><a class="port" href="#profil"><span class="port-jack" aria-hidden="true"></span><span class="port-led" aria-hidden="true"></span><span class="port-label">Profil</span></a></li>
+          <li><a class="port" href="#alternance"><span class="port-jack" aria-hidden="true"></span><span class="port-led" aria-hidden="true"></span><span class="port-label">Alternance</span></a></li>
+          <li><a class="port" href="#projets"><span class="port-jack" aria-hidden="true"></span><span class="port-led" aria-hidden="true"></span><span class="port-label">Projets</span></a></li>
+          <li><a class="port" href="#competences"><span class="port-jack" aria-hidden="true"></span><span class="port-led" aria-hidden="true"></span><span class="port-label">Compétences</span></a></li>
+          <li><a class="port" href="#veille"><span class="port-jack" aria-hidden="true"></span><span class="port-led" aria-hidden="true"></span><span class="port-label">Veille</span></a></li>
+          <li><a class="port" href="#documentation"><span class="port-jack" aria-hidden="true"></span><span class="port-led" aria-hidden="true"></span><span class="port-label">Docs</span></a></li>
+          <li><a class="port" href="#contact"><span class="port-jack" aria-hidden="true"></span><span class="port-led" aria-hidden="true"></span><span class="port-label">Contact</span></a></li>
+        </ol>
+      </nav>
+
+      <button class="search-btn" id="searchBtn" type="button" aria-label="Rechercher dans le portfolio" aria-keyshortcuts="Control+K">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        <span class="search-btn-label">Rechercher</span>
+        <kbd class="search-kbd">Ctrl K</kbd>
+      </button>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Basculer le thème clair ou sombre">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =====================================================
+         HERO — nom + schéma réseau de ses réalisations
+         ===================================================== -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1 class="hero-name"><span>Axel</span> <span>Royer</span></h1>
+          <p class="hero-role">Technicien systèmes et réseaux en alternance chez Riou Glass, étudiant en BTS SIO option SISR.</p>
+
+          <dl class="hero-facts">
+            <div><dt>Formation</dt><dd>BTS SIO SISR, E2SE Caen</dd></div>
+            <div><dt>Année</dt><dd>1re année, 2025/2026</dd></div>
+            <div><dt>Basé à</dt><dd>Honfleur, Normandie</dd></div>
+          </dl>
+
+          <div class="hero-actions">
+            <a href="#projets" class="btn btn-solid">Voir mes projets</a>
+            <a href="#contact" class="btn btn-line">Me contacter</a>
+          </div>
+        </div>
+
+        <figure class="topology" aria-labelledby="topoCaption">
+          <svg id="topoSvg" viewBox="0 0 520 470" role="group" aria-label="Schéma réseau des projets réalisés">
+            <!-- Zones -->
+            <rect class="zone" aria-hidden="true" x="16" y="196" width="488" height="262" rx="10"/>
+            <text class="zone-label" x="32" y="220">LAN</text>
+            <text class="zone-label" x="32" y="104">WAN</text>
+
+            <!-- Liens (dessinés au chargement) -->
+            <g class="links">
+              <path class="link" data-link="internet-exchange" d="M300 52 H392"/>
+              <path class="link" data-link="internet-cloudflare" d="M220 52 H140"/>
+              <path class="link" data-link="internet-pfsense" d="M260 76 V128"/>
+              <path class="link" data-link="pfsense-switch" d="M260 176 V244"/>
+              <path class="link" data-link="switch-debian" d="M224 266 C150 266 92 290 92 360"/>
+              <path class="link" data-link="switch-winserver" d="M240 290 C220 320 206 330 206 372"/>
+              <path class="link" data-link="switch-nas" d="M280 290 C300 320 316 330 316 372"/>
+              <path class="link" data-link="switch-postes" d="M296 266 C370 266 430 290 430 360"/>
+            </g>
+
+            <!-- Équipements non cliquables -->
+            <g class="node node-static" data-node="internet" aria-hidden="true" transform="translate(220 28)">
+              <rect width="80" height="48" rx="24"/>
+              <text x="40" y="29" class="node-name">Internet</text>
+            </g>
+            <g class="node node-static" data-node="switch" aria-hidden="true" transform="translate(224 244)">
+              <rect width="72" height="44" rx="6"/>
+              <text x="36" y="20" class="node-name">Switch</text>
+              <text x="36" y="34" class="node-type">commutateur</text>
+            </g>
+
+            <!-- Équipements liés à un projet (cliquables) -->
+            <a href="#p-exchange" class="node" data-node="exchange" data-status="done" transform="translate(392 28)">
+              <rect width="116" height="48" rx="6"/>
+              <circle class="node-led" cx="104" cy="12" r="4"/>
+              <text x="54" y="24" class="node-name">Exchange</text>
+              <text x="54" y="38" class="node-type">messagerie cloud</text>
+            </a>
+            <a href="#p-bookaru" class="node" data-node="cloudflare" data-status="done" transform="translate(24 28)">
+              <rect width="116" height="48" rx="6"/>
+              <circle class="node-led" cx="104" cy="12" r="4"/>
+              <text x="54" y="24" class="node-name">Cloudflare</text>
+              <text x="54" y="38" class="node-type">tunnel HTTPS</text>
+            </a>
+            <a href="#p-intranet" class="node" data-node="pfsense" data-status="wip" transform="translate(212 128)">
+              <rect width="96" height="48" rx="6"/>
+              <circle class="node-led" cx="84" cy="12" r="4"/>
+              <text x="44" y="24" class="node-name">pfSense</text>
+              <text x="44" y="38" class="node-type">pare-feu</text>
+            </a>
+            <a href="#p-intranet" class="node" data-node="debian" data-status="wip" transform="translate(36 360)">
+              <rect width="112" height="56" rx="6"/>
+              <circle class="node-led" cx="100" cy="12" r="4"/>
+              <text x="52" y="26" class="node-name">Debian 13</text>
+              <text x="52" y="42" class="node-type">LAMP, DNS</text>
+            </a>
+            <a href="#p-winserver" class="node" data-node="winserver" data-status="wip" transform="translate(156 372)">
+              <rect width="100" height="56" rx="6"/>
+              <circle class="node-led" cx="88" cy="12" r="4"/>
+              <text x="46" y="26" class="node-name">Win Server</text>
+              <text x="46" y="42" class="node-type">AD, DNS, DHCP</text>
+            </a>
+            <a href="#p-nas" class="node" data-node="nas" data-status="done" transform="translate(266 372)">
+              <rect width="100" height="56" rx="6"/>
+              <circle class="node-led" cx="88" cy="12" r="4"/>
+              <text x="46" y="26" class="node-name">NAS OMV</text>
+              <text x="46" y="42" class="node-type">RAID, SMB</text>
+            </a>
+            <a href="#p-postes" class="node" data-node="postes" data-status="wip" transform="translate(376 360)">
+              <rect width="112" height="56" rx="6"/>
+              <circle class="node-led" cx="100" cy="12" r="4"/>
+              <text x="52" y="26" class="node-name">Postes</text>
+              <text x="52" y="42" class="node-type">Windows 11</text>
+            </a>
+
+            <g class="packets" id="packets"></g>
+          </svg>
+          <figcaption id="topoCaption">
+            <span class="legend"><i class="led led-done"></i>Terminé</span>
+            <span class="legend"><i class="led led-wip"></i>En cours</span>
+            <span class="topo-readout" id="topoReadout" aria-live="polite">Cliquez sur un équipement pour ouvrir sa fiche projet</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PROFIL
+         ===================================================== -->
+    <section class="section" id="profil">
+      <div class="wrap profile-grid">
+        <div class="prose">
+          <h2 class="section-title">Profil</h2>
+          <p>Je m'appelle Axel Royer et je suis en première année de BTS SIO option SISR (Solutions d'Infrastructure, Systèmes et Réseaux). Je suis en <strong>reconversion professionnelle</strong> : j'ai choisi de transformer une passion de longue date pour l'informatique en un vrai projet de carrière.</p>
+          <p>En alternance chez <strong>Riou Glass</strong> à Honfleur, j'interviens sur l'assistance aux utilisateurs, la gestion du parc informatique et l'administration de la messagerie et des comptes. Le terrain me permet de mettre en pratique ce que j'apprends en formation et de construire une approche professionnelle du support et de l'administration système.</p>
+          <p>Mon objectif : devenir <strong>administrateur systèmes et réseaux</strong>, à l'aise sur Windows, Linux et la virtualisation, pour contribuer à des infrastructures fiables, sécurisées et performantes.</p>
+        </div>
+
+        <!-- Étiquette d'inventaire -->
+        <aside class="asset-tag" aria-label="Fiche récapitulative">
+          <div class="asset-head">
+            <span class="asset-title">Fiche inventaire</span>
+            <span class="asset-id">SIO-SISR-2025</span>
+          </div>
+          <dl class="asset-fields">
+            <div><dt>Nom</dt><dd>Axel Royer</dd></div>
+            <div><dt>Formation</dt><dd>BTS SIO, option SISR</dd></div>
+            <div><dt>École</dt><dd>E2SE Caen</dd></div>
+            <div><dt>Entreprise</dt><dd>Riou Glass, Honfleur</dd></div>
+            <div><dt>Intérêts</dt><dd>Réseaux, cybersécurité, Linux</dd></div>
+            <div><dt>Objectif</dt><dd>Administrateur systèmes et réseaux</dd></div>
+          </dl>
+          <div class="asset-barcode" aria-hidden="true"></div>
+        </aside>
+      </div>
+
+      <div class="wrap">
+        <h3 class="sub-title">Parcours</h3>
+        <ol class="timeline">
+          <li class="tl-item">
+            <span class="tl-when">Avant 2025</span>
+            <span class="tl-what">Secteur de la santé</span>
+            <span class="tl-desc">Premier parcours professionnel, au contact des personnes : écoute, rigueur et gestion des priorités.</span>
+          </li>
+          <li class="tl-item">
+            <span class="tl-when">2025</span>
+            <span class="tl-what">Reconversion</span>
+            <span class="tl-desc">Décision de faire de ma passion pour l'informatique un métier.</span>
+          </li>
+          <li class="tl-item">
+            <span class="tl-when">Sept. 2025</span>
+            <span class="tl-what">BTS SIO SISR et alternance</span>
+            <span class="tl-desc">Entrée à E2SE Caen et arrivée chez Riou Glass comme technicien systèmes et réseaux.</span>
+          </li>
+          <li class="tl-item">
+            <span class="tl-when">Été 2026</span>
+            <span class="tl-what">Homelab en production</span>
+            <span class="tl-desc">Serveur personnel supervisé et sauvegardé, première application mise en ligne.</span>
+          </li>
+          <li class="tl-item tl-next">
+            <span class="tl-when">Objectif</span>
+            <span class="tl-what">Administrateur systèmes et réseaux</span>
+            <span class="tl-desc">Windows, Linux et virtualisation, pour des infrastructures fiables et sécurisées.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ALTERNANCE
+         ===================================================== -->
+    <section class="section section-alt" id="alternance">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Alternance</h2>
+          <p class="section-intro">Technicien systèmes et réseaux chez Riou Glass depuis septembre 2025.</p>
+        </div>
+
+        <div class="company">
+          <div class="company-id">
+            <div class="company-mark" aria-hidden="true">RG</div>
+            <div>
+              <h3 class="company-name">Riou Glass</h3>
+              <p class="company-sub">Industrie du verre, Honfleur</p>
+            </div>
+          </div>
+          <dl class="company-facts">
+            <div><dt>Effectif</dt><dd>~1 400</dd></div>
+            <div><dt>Forme</dt><dd>SAS</dd></div>
+            <div><dt>Secteur</dt><dd>Industrie</dd></div>
+            <div><dt>Depuis</dt><dd><span>Sept. 2025</span><small class="since" data-since="2025-09-01"></small></dd></div>
+          </dl>
+        </div>
+
+        <ul class="missions">
+          <li class="mission">
+            <h3>Assistance utilisateurs</h3>
+            <p>Support de niveau 1 et 2 auprès des collaborateurs : suivi des tickets GLPI, prise en main à distance, résolution des incidents.</p>
+          </li>
+          <li class="mission">
+            <h3>Gestion du parc informatique</h3>
+            <p>Inventaire, déploiement des postes via WDS, maintenance des postes de travail, imprimantes et périphériques.</p>
+          </li>
+          <li class="mission">
+            <h3>Messagerie et comptes</h3>
+            <p>Administration d'Exchange Online et gestion des comptes et des droits dans Active Directory.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PROJETS — chaque projet est une unité de baie
+         data-context : entreprise | ecole | perso
+         data-status  : done | wip
+         data-comp    : compétences du bloc 1 couvertes (1 à 6)
+         ===================================================== -->
+    <section class="section" id="projets">
+      <div class="wrap">
+        <div class="section-head section-head-row">
+          <div>
+            <h2 class="section-title">Projets</h2>
+            <p class="section-intro">Les réalisations de mon tableau de synthèse E5, complétées par mes projets personnels. Chaque fiche détaille le contexte, la démarche et les compétences mobilisées.</p>
+            <dl class="kpis" id="kpis"></dl>
+          </div>
+          <div class="filters" role="group" aria-label="Filtrer les projets">
+            <button type="button" class="filter is-on" data-filter="all" aria-pressed="true">Tous</button>
+            <button type="button" class="filter" data-filter="entreprise" aria-pressed="false">Entreprise</button>
+            <button type="button" class="filter" data-filter="ecole" aria-pressed="false">Formation</button>
+            <button type="button" class="filter" data-filter="perso" aria-pressed="false">Personnel</button>
+          </div>
+        </div>
+
+        <div class="rack" id="rack">
+
+          <!-- =========== FORMATION =========== -->
+
+          <!-- Projet phare : 2U -->
+          <article class="unit unit-2u" id="p-intranet" data-context="ecole" data-status="wip" data-comp="1,2,3,4,5,6" data-period="Mars 2026, en cours">
+            <div class="unit-status"><i class="led led-wip"></i><span>En cours</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Formation <span class="unit-period">Mars 2026, en cours</span></p>
+              <h3 class="unit-title">Solution d'hébergement intranet</h3>
+              <p class="unit-desc">Prototype d'hébergement d'applications web en intranet pour une petite entreprise : serveur Debian sécurisé, pile LAMP, zone DNS interne, isolation par pare-feu pfSense, puis supervision, sauvegardes et automatisation. Projet fil rouge sur les deux années du BTS.</p>
+              <ol class="steps">
+                <li class="step step-done">
+                  <span class="step-name">Cœur fonctionnel</span>
+                  <span class="step-text">Debian 13, LAMP, Bind9 (zone intranet.local), WordPress, Nextcloud, UFW et Fail2ban.</span>
+                  <span class="step-state">Terminée</span>
+                </li>
+                <li class="step step-wip">
+                  <span class="step-name">Sécurité</span>
+                  <span class="step-text">pfSense en frontal, DNS Resolver, redirection de ports, bascule de la VM en LAN isolé.</span>
+                  <span class="step-state">En cours</span>
+                </li>
+                <li class="step step-todo">
+                  <span class="step-name">Supervision et sauvegardes</span>
+                  <span class="step-text">Zabbix et SNMP, rsyslog et LogAnalyzer, protocole de sauvegarde testé.</span>
+                  <span class="step-state">À venir</span>
+                </li>
+                <li class="step step-todo">
+                  <span class="step-name">Automatisation</span>
+                  <span class="step-text">Sauvegarde nocturne planifiée, script d'ajout de sous-domaine.</span>
+                  <span class="step-state">À venir</span>
+                </li>
+              </ol>
+              <ul class="tags"><li>Debian 13</li><li>Apache</li><li>MariaDB</li><li>Bind9</li><li>Fail2ban</li><li>pfSense</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-intranet">Voir la fiche projet</button>
+              <a href="docs/SIO-OptionA-SR-Projet-Solution-Hebergement-Intranet.pdf" data-viewer target="_blank" rel="noopener">Cahier des charges <small>PDF, 9 p.</small></a>
+              <a href="docs/guide-virtualbox-tranche1.pdf" data-viewer target="_blank" rel="noopener">Guide de configuration, tranche 1 <small>PDF, 7 p.</small></a>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Contexte</h4>
+                <p>Mettre en œuvre, pour une petite entreprise, une solution d'hébergement d'applications web en intranet : un prototype viable, conforme à l'état de l'art, couvrant la sécurité, l'hébergement PHP/MariaDB dans un domaine interne dédié, la supervision, les sauvegardes et l'automatisation. Présenté dans son état d'avancement au BTS blanc de mai 2026.</p>
+              </section>
+              <section>
+                <h4>Architecture cible</h4>
+                <figure class="mini-arch">
+                  <svg viewBox="0 0 460 210" role="img" aria-label="Architecture : pfSense relie Internet au LAN 172.31.29.0/24 qui contient la VM d'hébergement en .2 et la VM de supervision en .3">
+                    <rect class="ma-box ma-ext" x="10" y="14" width="110" height="40" rx="20"/>
+                    <text x="65" y="39" class="ma-t">Internet</text>
+                    <path class="ma-l" d="M120 34 H170"/>
+                    <rect class="ma-box ma-fw" x="170" y="10" width="120" height="48" rx="6"/>
+                    <text x="230" y="31" class="ma-t">VM pfSense</text>
+                    <text x="230" y="47" class="ma-s">WAN NAT, LAN .1</text>
+                    <path class="ma-l" d="M230 58 V96"/>
+                    <path class="ma-bus" d="M40 100 H420"/>
+                    <text x="420" y="92" class="ma-s ma-end">LAN 172.31.29.0/24</text>
+                    <path class="ma-l" d="M120 100 V136"/>
+                    <path class="ma-l ma-dash" d="M340 100 V136"/>
+                    <rect class="ma-box" x="50" y="136" width="140" height="54" rx="6"/>
+                    <text x="120" y="158" class="ma-t">VM Hébergement</text>
+                    <text x="120" y="175" class="ma-s">172.31.29.2, LAMP, DNS</text>
+                    <rect class="ma-box ma-dash" x="270" y="136" width="140" height="54" rx="6"/>
+                    <text x="340" y="158" class="ma-t">VM Supervision</text>
+                    <text x="340" y="175" class="ma-s">172.31.29.3, tranche 3</text>
+                  </svg>
+                </figure>
+              </section>
+              <section>
+                <h4>Tranche 1 : cœur fonctionnel</h4>
+                <ul class="check-list">
+                  <li>VM Debian 13 en ligne de commande, deux interfaces (NAT et réseau privé hôte en IP fixe)</li>
+                  <li>Pile LAMP : Apache2, MariaDB sécurisée manuellement, PHP et modules</li>
+                  <li>Bind9 : zone <code>intranet.local</code> vérifiée avec named-checkzone et nslookup</li>
+                  <li>Portail WordPress sur intranet.local et Nextcloud sur cloud.intranet.local, chacun avec son VirtualHost et sa base dédiée</li>
+                  <li>Réduction de la surface d'attaque : SSH limité, UFW sur les seuls ports utiles, Fail2ban sur SSH</li>
+                </ul>
+              </section>
+              <section>
+                <h4>Tranche 2 : sécurité</h4>
+                <ul class="check-list check-list-wip">
+                  <li>Installation de pfSense et règles de pare-feu</li>
+                  <li>DNS Resolver pour l'accès Internet du LAN et la diffusion de la zone intranet.local</li>
+                  <li>Redirection de ports vers l'hébergement (DNS, HTTP, HTTPS, SSH)</li>
+                  <li>Bascule de la VM d'hébergement derrière pfSense</li>
+                </ul>
+              </section>
+              <section>
+                <h4>Tranches 3 et 4 : à venir</h4>
+                <ul class="check-list check-list-todo">
+                  <li>Zabbix avec agents sur les deux Debian et sonde SNMP sur pfSense</li>
+                  <li>Centralisation des journaux rsyslog, rotation et visualisation LogAnalyzer</li>
+                  <li>Protocole de sauvegarde des bases et applications, testé</li>
+                  <li>Scripts : sauvegarde automatique chaque nuit, ajout d'un sous-domaine avec déploiement</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <article class="unit" id="p-nas" data-context="perso" data-status="done" data-comp="1,2,4,5,6" data-period="Janvier 2026">
+            <div class="unit-status"><i class="led led-done"></i><span>En production</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Personnel <span class="unit-period">Janvier 2026</span></p>
+              <h3 class="unit-title">Recyclage d'un ancien PC en NAS</h3>
+              <p class="unit-desc">Un ancien ordinateur fixe transformé en serveur de stockage sous OpenMediaVault : RAID 1, partages SMB avec droits par profil, puis évolution en homelab supervisé, sauvegardé et accessible à distance sans aucun port ouvert.</p>
+              <ul class="tags"><li>OpenMediaVault</li><li>RAID 1</li><li>SMB, ACL</li><li>Docker</li><li>Tailscale</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-nas">Voir la fiche projet</button>
+              <a href="docs/cahier-des-charges-nas.pdf" data-viewer target="_blank" rel="noopener">Cahier des charges <small>PDF, 7 p.</small></a>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Contexte et objectifs</h4>
+                <p>Concevoir une solution de stockage en réseau pour centraliser, sécuriser et partager les données d'un foyer ou d'une petite structure, en réemployant du matériel existant et des logiciels exclusivement open source.</p>
+                <dl class="spec">
+                  <div><dt>Stockage</dt><dd>2 disques de 4 To en RAID 1, 4 To utiles, EXT4</dd></div>
+                  <div><dt>Système</dt><dd>OpenMediaVault (Debian) sur SSD séparé</dd></div>
+                  <div><dt>Profils</dt><dd>Administrateur, groupe Famille, groupe Invités en lecture seule, droits par ACL</dd></div>
+                  <div><dt>Services</dt><dd>SMB, SSH, surveillance S.M.A.R.T., alertes</dd></div>
+                </dl>
+              </section>
+              <section>
+                <h4>Déploiement en 5 phases</h4>
+                <ol class="phase-list">
+                  <li>Préparation et tests du matériel</li>
+                  <li>Installation d'OpenMediaVault et IP fixe</li>
+                  <li>Création du RAID 1 et du volume EXT4</li>
+                  <li>Partages SMB, comptes et droits ACL</li>
+                  <li>Recette : accès réseau, redondance RAID, permissions</li>
+                </ol>
+              </section>
+              <section>
+                <h4>Évolution en homelab</h4>
+                <ul class="check-list">
+                  <li>Docker administré avec Portainer : Jellyfin avec accélération matérielle, tableau de bord Homepage</li>
+                  <li>Accès distant par VPN Tailscale, aucun port ouvert sur la box ; accès des invités cloisonné à un seul service par ACL</li>
+                  <li>SSH par clé uniquement, connexion root désactivée, administration via un compte sudo</li>
+                  <li>Supervision : Uptime Kuma, Scrutiny (S.M.A.R.T.), Diun, heartbeat externe, alertes Discord</li>
+                  <li>Sauvegarde hebdomadaire planifiée, validée par un test de restauration réel et un test de redémarrage complet</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <article class="unit" id="p-lancom" data-context="ecole" data-status="done" data-comp="1,2,4,5,6" data-period="Février 2026">
+            <div class="unit-status"><i class="led led-done"></i><span>Terminé</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Formation <span class="unit-period">Février 2026</span></p>
+              <h3 class="unit-title">Configuration d'un pare-feu Lancom UF60</h3>
+              <p class="unit-desc">Sécurisation d'un réseau par la mise en place d'un pare-feu Lancom UF60 : installation, règles de filtrage, tests de validation et analyse des journaux de sécurité.</p>
+              <ul class="tags"><li>Lancom UF60</li><li>Filtrage</li><li>Journaux de sécurité</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-lancom">Voir la fiche projet</button>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Objectif</h4>
+                <p>Sécuriser le réseau en plaçant un pare-feu professionnel en coupure et en définissant une politique de filtrage adaptée.</p>
+              </section>
+              <section>
+                <h4>Réalisation</h4>
+                <ul class="check-list">
+                  <li>Recensement des ressources à protéger et application des bonnes pratiques du constructeur</li>
+                  <li>Installation et configuration des règles de filtrage</li>
+                  <li>Tests de validation du bon fonctionnement des règles</li>
+                  <li>Analyse des journaux de sécurité, suivi des incidents et adaptation des règles</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <article class="unit" id="p-winserver" data-context="ecole" data-status="wip" data-comp="5" data-period="">
+            <div class="unit-status"><i class="led led-wip"></i><span>En cours</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Formation</p>
+              <h3 class="unit-title">Déploiement d'une VM Windows Server</h3>
+              <p class="unit-desc">Installation et configuration de Windows Server 2019 sous VirtualBox, avec les rôles Active Directory, DNS et DHCP.</p>
+              <ul class="tags"><li>VirtualBox</li><li>Windows Server 2019</li><li>AD DS</li><li>DNS</li><li>DHCP</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-winserver">Voir la fiche projet</button>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Contexte</h4>
+                <p>Travaux pratiques de formation : monter un contrôleur de domaine dans un environnement virtualisé.</p>
+              </section>
+              <section>
+                <h4>Réalisation</h4>
+                <ul class="check-list">
+                  <li>Création de la machine virtuelle sous VirtualBox</li>
+                  <li>Installation de Windows Server 2019</li>
+                  <li>Ajout et configuration des rôles Active Directory, DNS et DHCP</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <!-- =========== ENTREPRISE (Riou Glass) =========== -->
+
+          <article class="unit" id="p-support" data-context="entreprise" data-status="wip" data-comp="1,2,5,6" data-period="Sept. 2025, en cours">
+            <div class="unit-status"><i class="led led-wip"></i><span>En continu</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Entreprise <span class="unit-period">Sept. 2025, en cours</span></p>
+              <h3 class="unit-title">Gestion des demandes et incidents</h3>
+              <p class="unit-desc">Réception, suivi et résolution des demandes des collaborateurs dans GLPI : incidents réseau, système et applicatifs, avec prise en main à distance des postes.</p>
+              <ul class="tags"><li>GLPI</li><li>Dameware</li><li>Support N1/N2</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-support">Voir la fiche projet</button>
+              <a href="https://glpi-user-documentation.readthedocs.io/fr/latest/" target="_blank" rel="noopener">Documentation GLPI <small>Lien externe</small></a>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Réalisation</h4>
+                <ul class="check-list">
+                  <li>Réception, qualification et suivi des tickets dans GLPI</li>
+                  <li>Identification des ressources concernées et application des procédures internes</li>
+                  <li>Résolution des incidents réseau, système et applicatifs, prise en main via Dameware</li>
+                  <li>Vérification du service après résolution et accompagnement de l'utilisateur</li>
+                </ul>
+              </section>
+              <section>
+                <h4>Acquis</h4>
+                <p>Rédaction de fiches de procédure, constitution d'une base de connaissances personnelle, méthode de diagnostic et maîtrise de GLPI.</p>
+              </section>
+            </div>
+          </article>
+
+          <article class="unit" id="p-postes" data-context="entreprise" data-status="wip" data-comp="1,5,6" data-period="Sept. 2025, en cours">
+            <div class="unit-status"><i class="led led-wip"></i><span>En continu</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Entreprise <span class="unit-period">Sept. 2025, en cours</span></p>
+              <h3 class="unit-title">Préparation de postes de travail</h3>
+              <p class="unit-desc">Déploiement de Windows 11 par le réseau (PXE avec WDS), contrôles de fonctionnement et préparation des sessions utilisateurs avant remise.</p>
+              <ul class="tags"><li>PXE</li><li>WDS</li><li>Windows 11</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-postes">Voir la fiche projet</button>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Réalisation</h4>
+                <ul class="check-list">
+                  <li>Inventaire et identification des postes à préparer</li>
+                  <li>Installation de Windows 11 par démarrage réseau PXE, selon les standards de déploiement</li>
+                  <li>Vérification du bon fonctionnement et préparation des sessions utilisateurs</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <article class="unit" id="p-parc" data-context="entreprise" data-status="wip" data-comp="1,4,5,6" data-period="Sept. 2025, en cours">
+            <div class="unit-status"><i class="led led-wip"></i><span>En continu</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Entreprise <span class="unit-period">Sept. 2025, en cours</span></p>
+              <h3 class="unit-title">Gestion et reconditionnement du parc</h3>
+              <p class="unit-desc">Inventaire du parc avec Lansweeper, renouvellement des postes obsolètes, et reconditionnement des postes récupérés lors de la fermeture d'un site industriel, selon une procédure que j'ai formalisée.</p>
+              <ul class="tags"><li>Lansweeper</li><li>Masterisation</li><li>Windows 11 25H2</li><li>Active Directory</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-parc">Voir la fiche projet</button>
+              <a href="docs/Procedure_Reconditionnement_Postes_Pro.pdf" data-viewer target="_blank" rel="noopener">Procédure de reconditionnement <small>PDF, 2 p.</small></a>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Renouvellement</h4>
+                <ul class="check-list">
+                  <li>Suivi de l'inventaire dans Lansweeper et repérage des postes obsolètes</li>
+                  <li>Devis, validation par les responsables, réception et préparation des nouveaux postes</li>
+                </ul>
+              </section>
+              <section>
+                <h4>Reconditionnement après fermeture de site</h4>
+                <ol class="phase-list">
+                  <li>Récupération et contrôle visuel et fonctionnel des équipements</li>
+                  <li>Référencement dans un fichier de suivi (n° de série, modèle, utilisateur, état, statut)</li>
+                  <li>Décommissionnement des objets ordinateurs dans Active Directory</li>
+                  <li>Masterisation : image standard Windows 11 25H2, contrôles qualité</li>
+                  <li>Réintégration dans Active Directory, déplacement vers l'OU cible</li>
+                  <li>Étiquetage d'inventaire et clôture dans le suivi</li>
+                </ol>
+              </section>
+            </div>
+          </article>
+
+          <article class="unit" id="p-ad" data-context="entreprise" data-status="wip" data-comp="1,5,6" data-period="Sept. 2025, en cours">
+            <div class="unit-status"><i class="led led-wip"></i><span>En continu</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Entreprise <span class="unit-period">Sept. 2025, en cours</span></p>
+              <h3 class="unit-title">Gestion des droits Active Directory</h3>
+              <p class="unit-desc">Attribution et contrôle des droits d'accès des utilisateurs dans l'annuaire, selon les standards d'habilitation de l'entreprise.</p>
+              <ul class="tags"><li>Active Directory</li><li>Habilitations</li><li>Sécurité</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-ad">Voir la fiche projet</button>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Réalisation</h4>
+                <ul class="check-list">
+                  <li>Mise en place et contrôle des droits d'accès des utilisateurs</li>
+                  <li>Vérification du respect des règles d'utilisation via l'annuaire</li>
+                  <li>Accompagnement des utilisateurs dans la gestion de leurs accès</li>
+                </ul>
+              </section>
+              <section>
+                <h4>Acquis</h4>
+                <p>Administration d'annuaire, gestion des droits et des politiques de sécurité, application des standards d'habilitation.</p>
+              </section>
+            </div>
+          </article>
+
+          <article class="unit" id="p-exchange" data-context="entreprise" data-status="wip" data-comp="1,2,5,6" data-period="Sept. 2025, en cours">
+            <div class="unit-status"><i class="led led-wip"></i><span>En continu</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Entreprise <span class="unit-period">Sept. 2025, en cours</span></p>
+              <h3 class="unit-title">Administration de la messagerie Exchange</h3>
+              <p class="unit-desc">Gestion des boîtes aux lettres, groupes de distribution et règles de messagerie, prise en charge des demandes et incidents liés au service.</p>
+              <ul class="tags"><li>Exchange</li><li>Messagerie</li><li>Active Directory</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-exchange">Voir la fiche projet</button>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Réalisation</h4>
+                <ul class="check-list">
+                  <li>Création et gestion des boîtes aux lettres et des groupes de distribution</li>
+                  <li>Configuration des règles de messagerie</li>
+                  <li>Prise en charge et suivi des demandes et incidents sur la messagerie</li>
+                  <li>Tests du service et accompagnement des utilisateurs</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <!-- =========== PERSONNEL (hors tableau E5) =========== -->
+
+          <article class="unit" id="p-bookaru" data-context="perso" data-status="done" data-comp="3,4,5" data-period="Été 2026">
+            <div class="unit-status"><i class="led led-done"></i><span>En ligne</span></div>
+            <div class="unit-body">
+              <p class="unit-context">Personnel <span class="unit-period">Été 2026</span></p>
+              <h3 class="unit-title">Mise en ligne d'une application auto-hébergée</h3>
+              <p class="unit-desc">Publication en HTTPS de Bookaru, une application web de suivi de lecture que j'ai développée, hébergée sur mon NAS et exposée sur Internet sans ouvrir le moindre port.</p>
+              <ul class="tags"><li>Cloudflare Tunnel</li><li>Caddy</li><li>Docker</li><li>DNS</li><li>Git</li></ul>
+            </div>
+            <div class="unit-links">
+              <button type="button" class="btn-sheet" data-open="p-bookaru">Voir la fiche projet</button>
+              <a href="https://bookaru.app" target="_blank" rel="noopener">Ouvrir l'application <small>bookaru.app</small></a>
+            </div>
+            <div class="unit-detail" hidden>
+              <section>
+                <h4>Contexte</h4>
+                <p>Rendre une application web développée par mes soins accessible publiquement, en HTTPS, depuis mon propre serveur, sans exposer le réseau domestique.</p>
+              </section>
+              <section>
+                <h4>Réalisation</h4>
+                <ul class="check-list">
+                  <li>Application servie par un conteneur Caddy</li>
+                  <li>Nom de domaine enregistré et DNS gérés chez Cloudflare</li>
+                  <li>Exposition publique par Cloudflare Tunnel : HTTPS automatique, aucune redirection de port sur la box</li>
+                  <li>Réseau Docker interne entre le tunnel et le serveur web, port de l'hôte retiré : l'application n'est joignable que par le tunnel</li>
+                  <li>Déploiement automatique : le serveur récupère chaque nouvelle version publiée sur GitHub et notifie sur Discord</li>
+                  <li>Disponibilité surveillée par Uptime Kuma</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+        </div>
+        <p class="rack-empty" id="rackEmpty" hidden>Aucun projet dans cette catégorie pour l'instant.</p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         COMPÉTENCES
+         ===================================================== -->
+    <section class="section section-alt" id="competences">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Compétences</h2>
+          <p class="section-intro">Les outils et technologies que j'utilise, puis la couverture du bloc 1 du référentiel par mes réalisations.</p>
+        </div>
+
+        <div class="skills">
+          <div class="skill-group" style="--cable: var(--c-blue)">
+            <h3>Réseaux</h3>
+            <ul><li>TCP/IP</li><li>Modèle OSI</li><li>CIDR</li><li>VLAN</li><li>DNS, Bind9</li><li>DHCP</li><li>Pare-feu, pfSense, NAT</li><li>VPN Tailscale</li><li>Cloudflare Tunnel</li><li>Packet Tracer</li></ul>
+          </div>
+          <div class="skill-group" style="--cable: var(--c-purple)">
+            <h3>Systèmes</h3>
+            <ul><li>Windows Server</li><li>Active Directory</li><li>Exchange</li><li>Windows 10/11</li><li>Debian</li><li>OpenMediaVault, RAID</li><li>SSH par clé, Fail2ban</li></ul>
+          </div>
+          <div class="skill-group" style="--cable: var(--c-green)">
+            <h3>Virtualisation et services</h3>
+            <ul><li>VirtualBox</li><li>VMware Workstation</li><li>Docker, Portainer</li><li>Caddy, LAMP</li><li>Uptime Kuma, Scrutiny</li><li>Sauvegarde et restauration</li></ul>
+          </div>
+          <div class="skill-group" style="--cable: var(--c-orange)">
+            <h3>Support et outils</h3>
+            <ul><li>Assistance utilisateurs</li><li>GLPI</li><li>Lansweeper</li><li>WDS</li><li>Gestion de parc</li><li>Déploiement de postes</li></ul>
+          </div>
+        </div>
+
+        <!-- Matrice générée par code.js à partir des attributs data-comp -->
+        <div class="matrix-block">
+          <h3 class="matrix-title">Couverture du bloc 1</h3>
+          <div class="matrix-scroll">
+            <table class="matrix" id="matrix">
+              <thead>
+                <tr>
+                  <th scope="col">Réalisation</th>
+                  <th scope="col">Période</th>
+                  <th scope="col" title="Gérer le patrimoine informatique">B1.1</th>
+                  <th scope="col" title="Répondre aux incidents et aux demandes d'assistance et d'évolution">B1.2</th>
+                  <th scope="col" title="Développer la présence en ligne de l'organisation">B1.3</th>
+                  <th scope="col" title="Travailler en mode projet">B1.4</th>
+                  <th scope="col" title="Mettre à disposition des utilisateurs un service informatique">B1.5</th>
+                  <th scope="col" title="Organiser son développement professionnel">B1.6</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <ol class="matrix-legend">
+            <li><b>B1.1</b> Gérer le patrimoine informatique</li>
+            <li><b>B1.2</b> Répondre aux incidents et aux demandes d'assistance et d'évolution</li>
+            <li><b>B1.3</b> Développer la présence en ligne de l'organisation</li>
+            <li><b>B1.4</b> Travailler en mode projet</li>
+            <li><b>B1.5</b> Mettre à disposition des utilisateurs un service informatique</li>
+            <li><b>B1.6</b> Organiser son développement professionnel</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         VEILLE
+         ===================================================== -->
+    <section class="section" id="veille" data-matrix-label="Veille technologique" data-comp="6">
+      <div class="wrap veille-grid">
+        <div class="section-head">
+          <h2 class="section-title">Veille</h2>
+          <p class="section-intro">Les sources que je suis pour rester à jour sur l'administration système, le réseau et la cybersécurité.</p>
+        </div>
+        <ul class="sources">
+          <li>
+            <a class="source" href="https://www.it-connect.fr/" target="_blank" rel="noopener">
+              <span class="source-name">IT-Connect</span>
+              <span class="source-desc">Actualités IT et tutoriels en administration système, réseau et cybersécurité.</span>
+              <span class="source-kind">Tutoriels</span>
+            </a>
+          </li>
+          <li>
+            <a class="source" href="https://www.lemagit.fr/" target="_blank" rel="noopener">
+              <span class="source-name">LeMagIT</span>
+              <span class="source-desc">Média spécialisé : analyses et conseils pour les professionnels de l'informatique.</span>
+              <span class="source-kind">Analyse</span>
+            </a>
+          </li>
+          <li>
+            <a class="source" href="https://feedly.com/" target="_blank" rel="noopener">
+              <span class="source-name">Feedly</span>
+              <span class="source-desc">Agrégateur qui centralise toutes mes sources via leurs flux RSS.</span>
+              <span class="source-kind">Agrégateur</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         DOCUMENTATION — vue « partage réseau »
+         ===================================================== -->
+    <section class="section section-alt" id="documentation">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Documentation</h2>
+          <p class="section-intro">Procédures, cahiers des charges et documents d'épreuve, à consulter ou télécharger.</p>
+        </div>
+
+        <div class="share">
+          <div class="share-bar">
+            <span class="share-path">\\portfolio\docs</span>
+            <span class="share-count" id="docCount"></span>
+          </div>
+          <ul class="doc-grid" id="files">
+            <li>
+              <a class="file" href="docs/tableau_synthese_E5_update.xlsx" download>
+                <span class="file-thumb"><img src="docs/apercus/tableau_synthese_E5_update.webp" alt="" width="480" height="340" loading="lazy" decoding="async"></span>
+                <span class="file-info">
+                  <span class="file-type ft-xlsx">XLSX</span>
+                  <span class="file-name">Tableau de synthèse épreuve E5</span>
+                  <span class="file-meta">Réalisations et compétences du bloc 1</span>
+                  <span class="file-size">Téléchargement</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="file" href="docs/SIO-OptionA-SR-Projet-Solution-Hebergement-Intranet.pdf" data-viewer target="_blank" rel="noopener">
+                <span class="file-thumb"><img src="docs/apercus/SIO-OptionA-SR-Projet-Solution-Hebergement-Intranet.webp" alt="" width="480" height="340" loading="lazy" decoding="async"></span>
+                <span class="file-info">
+                  <span class="file-type ft-pdf">PDF</span>
+                  <span class="file-name">Hébergement intranet : cahier des charges</span>
+                  <span class="file-meta">Contexte, architecture, 4 tranches</span>
+                  <span class="file-size">9 pages</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="file" href="docs/guide-virtualbox-tranche1.pdf" data-viewer target="_blank" rel="noopener">
+                <span class="file-thumb"><img src="docs/apercus/guide-virtualbox-tranche1.webp" alt="" width="480" height="340" loading="lazy" decoding="async"></span>
+                <span class="file-info">
+                  <span class="file-type ft-pdf">PDF</span>
+                  <span class="file-name">Hébergement intranet : guide tranche 1</span>
+                  <span class="file-meta">Debian 13, LAMP, Bind9, WordPress, Nextcloud</span>
+                  <span class="file-size">7 pages</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="file" href="docs/cahier-des-charges-nas.pdf" data-viewer target="_blank" rel="noopener">
+                <span class="file-thumb"><img src="docs/apercus/cahier-des-charges-nas.webp" alt="" width="480" height="340" loading="lazy" decoding="async"></span>
+                <span class="file-info">
+                  <span class="file-type ft-pdf">PDF</span>
+                  <span class="file-name">NAS : cahier des charges</span>
+                  <span class="file-meta">OpenMediaVault, RAID 1, SMB, ACL</span>
+                  <span class="file-size">7 pages</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="file" href="docs/Procedure_Reconditionnement_Postes_Pro.pdf" data-viewer target="_blank" rel="noopener">
+                <span class="file-thumb"><img src="docs/apercus/Procedure_Reconditionnement_Postes_Pro.webp" alt="" width="480" height="340" loading="lazy" decoding="async"></span>
+                <span class="file-info">
+                  <span class="file-type ft-pdf">PDF</span>
+                  <span class="file-name">Procédure de reconditionnement de postes</span>
+                  <span class="file-meta">Active Directory, masterisation, traçabilité</span>
+                  <span class="file-size">2 pages</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="file" href="https://glpi-user-documentation.readthedocs.io/fr/latest/" target="_blank" rel="noopener">
+                <span class="file-thumb file-thumb-web" aria-hidden="true"><span>GLPI</span></span>
+                <span class="file-info">
+                  <span class="file-type ft-web">WEB</span>
+                  <span class="file-name">Documentation utilisateur GLPI</span>
+                  <span class="file-meta">Gestion de parc, inventaire, tickets</span>
+                  <span class="file-size">Lien externe</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-intro">Ouvert aux échanges professionnels et aux projets autour des réseaux et de l'infrastructure.</p>
+
+          <div class="contact-card">
+            <span class="contact-label">Email</span>
+            <a class="contact-mail" id="contactMail" href="mailto:axel.royer@gmail.com">axel.royer@gmail.com</a>
+            <button type="button" class="btn-copy" id="copyMail" data-copy="axel.royer@gmail.com">Copier l'adresse</button>
+          </div>
+          <div class="contact-card">
+            <span class="contact-label">Localisation</span>
+            <span>Honfleur, Normandie</span>
+          </div>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <h3>Écrire un message</h3>
+          <p class="form-note">Le bouton ouvre votre messagerie avec le message prérempli.</p>
+          <div class="field">
+            <label for="name">Nom et prénom</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Jean Dupont" required>
+          </div>
+          <div class="field">
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="jean@exemple.fr" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Bonjour Axel, …" required></textarea>
+          </div>
+          <button class="btn btn-solid" type="submit">Ouvrir dans ma messagerie</button>
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>Axel Royer, BTS SIO SISR 1re année</span>
+      <span>Portfolio 2025/2026</span>
+      <span class="footer-actions">
+        <button type="button" class="footer-btn" id="printBtn">Version PDF</button>
+        <a href="#top">Haut de page</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Fiche projet (remplie par code.js) -->
+  <dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+    <div class="sheet-inner">
+      <div class="sheet-head">
+        <div class="sheet-meta">
+          <span class="sheet-status" id="sheetStatus"></span>
+          <span class="sheet-context" id="sheetContext"></span>
+        </div>
+        <button type="button" class="sheet-link" id="sheetLink">Copier le lien</button>
+        <button type="button" class="sheet-close" id="sheetClose" aria-label="Fermer la fiche">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="sheet-scroll">
+        <h2 class="sheet-title" id="sheetTitle">Fiche projet</h2>
+        <p class="sheet-lead" id="sheetLead"></p>
+        <ul class="tags" id="sheetTags"></ul>
+        <div class="sheet-body" id="sheetBody"></div>
+        <section class="sheet-comp">
+          <h3>Compétences du bloc 1 mobilisées</h3>
+          <ul id="sheetComp"></ul>
+        </section>
+        <section class="sheet-docs" id="sheetDocsWrap">
+          <h3>Documents</h3>
+          <div class="unit-links" id="sheetDocs"></div>
+        </section>
+      </div>
+      <div class="sheet-foot">
+        <button type="button" class="sheet-nav" id="sheetPrev">Projet précédent</button>
+        <button type="button" class="sheet-nav" id="sheetNext">Projet suivant</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Visionneuse de documents -->
+  <dialog class="viewer" id="viewer" aria-labelledby="viewerTitle">
+    <div class="viewer-head">
+      <span class="file-type ft-pdf" aria-hidden="true">PDF</span>
+      <h2 class="viewer-title" id="viewerTitle">Document</h2>
+      <a class="viewer-act" id="viewerOpen" href="#" target="_blank" rel="noopener">Ouvrir dans un onglet</a>
+      <a class="viewer-act" id="viewerDl" href="#" download>Télécharger</a>
+      <button type="button" class="sheet-close" id="viewerClose" aria-label="Fermer le document">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <iframe class="viewer-frame" id="viewerFrame" title="Aperçu du document"></iframe>
+  </dialog>
+
+  <!-- Recherche rapide (Ctrl K) -->
+  <dialog class="palette" id="palette" aria-label="Recherche rapide">
+    <div class="palette-inner">
+      <div class="palette-field">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        <input type="text" id="paletteInput" placeholder="Projet, compétence, document…" autocomplete="off" spellcheck="false"
+          role="combobox" aria-expanded="true" aria-controls="paletteList" aria-autocomplete="list">
+        <kbd>Échap</kbd>
+      </div>
+      <ul class="palette-list" id="paletteList" role="listbox"></ul>
+      <p class="palette-empty" id="paletteEmpty" hidden>Aucun résultat. Essayez « DNS », « Exchange » ou « PDF ».</p>
+      <div class="palette-foot"><span><kbd>↑</kbd><kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span></div>
+    </div>
+  </dialog>
+
+  <script src="code.js" defer></script>
+</body>
+
+</html>
